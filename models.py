@@ -1,11 +1,8 @@
 """
 Database models for Mini-P6 using SQLAlchemy + SQLite.
 """
-from sqlalchemy import (
-    Column, String, Integer, Boolean, create_engine, event
-)
-from sqlalchemy.orm import declarative_base, sessionmaker, Session
-from typing import Optional
+from sqlalchemy import Boolean, Column, Integer, String
+from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 

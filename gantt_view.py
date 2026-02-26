@@ -18,7 +18,7 @@ from PySide6.QtGui import (
 )
 from typing import Dict
 
-from engine.activity import Activity
+from activity import Activity
 
 
 # Layout constants

@@ -6,8 +6,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 from typing import List, Dict, Optional
 
-from .models import Base, ActivityRecord
-from engine.activity import Activity
+from models import Base, ActivityRecord
+from activity import Activity
 
 
 _engine = None
