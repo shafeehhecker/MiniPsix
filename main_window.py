@@ -19,16 +19,16 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont, QIcon, QColor, QPalette
 
-from engine.activity import Activity
-from engine.scheduler import CPMScheduler, SchedulerError
-from database.db import (
+from activity import Activity
+from scheduler import CPMScheduler, SchedulerError
+from db import (
     init_db, load_all_activities, save_activity,
     save_all_activities, delete_activity, activity_id_exists
 )
-from ui.activity_table import ActivityTable
-from ui.gantt_view import GanttView
-from ui.activity_dialog import ActivityDialog
-from ui.status_panel import StatusPanel
+from activity_table import ActivityTable
+from gantt_view import GanttView
+from activity_dialog import ActivityDialog
+from status_panel import StatusPanel
 from typing import Dict
 
 

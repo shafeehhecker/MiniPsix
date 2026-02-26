@@ -35,7 +35,7 @@ from PySide6.QtCore import Qt, QSize
 from PySide6.QtGui import QFont, QIcon
 from PySide6.QtWidgets import QApplication, QMessageBox
 
-from ui.main_window import MainWindow
+from main_window import MainWindow
 
 # ---------------------------------------------------------------------------
 # Application metadata
