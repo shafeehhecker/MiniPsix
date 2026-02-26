@@ -9,7 +9,7 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QColor, QFont, QBrush
 
-from engine.activity import Activity
+from activity import Activity
 from typing import Dict, Optional
 
 

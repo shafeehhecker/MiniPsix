@@ -31,11 +31,11 @@ if _PROJECT_ROOT not in sys.path:
 # ---------------------------------------------------------------------------
 # Qt imports — kept after sys.path fix so PySide6 can find any bundled libs
 # ---------------------------------------------------------------------------
-from PySide6.QtCore import Qt, QSize
+from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont, QIcon
 from PySide6.QtWidgets import QApplication, QMessageBox
 
-from ui.main_window import MainWindow
+from main_window import MainWindow
 
 # ---------------------------------------------------------------------------
 # Application metadata

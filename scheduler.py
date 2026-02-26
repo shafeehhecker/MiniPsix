@@ -4,7 +4,7 @@ Performs Forward Pass, Backward Pass, Float calculation, and Critical Path ident
 """
 from typing import Dict, List, Optional, Tuple
 from collections import deque
-from .activity import Activity
+from activity import Activity
 
 
 class SchedulerError(Exception):

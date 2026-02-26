@@ -29,7 +29,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from engine.activity import Activity
+from activity import Activity
 
 
 # ---------------------------------------------------------------------------

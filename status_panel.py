@@ -5,7 +5,7 @@ from PySide6.QtWidgets import QFrame, QHBoxLayout, QLabel
 from PySide6.QtCore import Qt
 from typing import Dict, List
 
-from engine.activity import Activity
+from activity import Activity
 
 
 class StatusPanel(QFrame):
