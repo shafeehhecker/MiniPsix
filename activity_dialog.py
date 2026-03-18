@@ -1,5 +1,5 @@
 """
-Dialog for adding or editing a CPM Activity.
+Dialog for adding or editing a CPM Activity – Light Theme.
 
 Provides a styled modal QDialog that:
   - Creates a new Activity (add mode) or pre-fills fields for an existing one (edit mode).
@@ -32,129 +32,122 @@ from PySide6.QtWidgets import (
 from activity import Activity
 
 
-# ---------------------------------------------------------------------------
-# Style constants — centralised so a future theme switch touches one place
-# ---------------------------------------------------------------------------
-
+# ================== LIGHT THEME STYLESHEET ==================
 _DIALOG_QSS = """
 QDialog {
-    background-color: #1e2530;
-    color: #c8d0dc;
+    background-color: #f8f8f8;
+    color: #202020;
 }
 
 /* ── Labels ── */
 QLabel {
-    color: #8a9bb0;
+    color: #404040;
     font-size: 12px;
 }
 QLabel#title_label {
-    color: #90b8d8;
+    color: #1e5c8a;
     font-size: 16px;
     font-weight: bold;
 }
 QLabel#section_label {
-    color: #6a8aa8;
+    color: #606060;
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 QLabel#hint_label {
-    color: #4a5a6a;
+    color: #808080;
     font-size: 11px;
     font-style: italic;
 }
 QLabel#error_label {
-    color: #e05060;
+    color: #c04040;
     font-size: 12px;
-    background-color: #2a1a1e;
-    border: 1px solid #6a2530;
+    background-color: #ffe0e0;
+    border: 1px solid #c04040;
     border-radius: 4px;
     padding: 5px 8px;
 }
 QLabel#success_label {
-    color: #50c878;
+    color: #2a7a2a;
     font-size: 12px;
 }
 
 /* ── Inputs ── */
 QLineEdit, QSpinBox {
-    background-color: #252d3a;
-    color: #e0e8f0;
-    border: 1px solid #3a4558;
+    background-color: #ffffff;
+    color: #202020;
+    border: 1px solid #c0c0c0;
     border-radius: 4px;
     padding: 6px 10px;
     font-size: 13px;
     min-height: 28px;
 }
 QLineEdit:focus, QSpinBox:focus {
-    border: 1px solid #4a7fa8;
-    background-color: #2a3545;
+    border: 1px solid #3a7ca5;
+    background-color: #f0f8ff;
 }
 QLineEdit:hover, QSpinBox:hover {
-    border: 1px solid #506070;
+    border: 1px solid #a0a0a0;
 }
 QLineEdit[readOnly="true"] {
-    background-color: #1a2030;
-    color: #5a7088;
-    border: 1px solid #2a3040;
+    background-color: #f0f0f0;
+    color: #808080;
+    border: 1px solid #d0d0d0;
 }
 QLineEdit[valid="false"] {
-    border: 1px solid #8a3040;
-    background-color: #2a1e25;
+    border: 1px solid #c04040;
+    background-color: #fff0f0;
 }
 QLineEdit[valid="true"] {
-    border: 1px solid #2a6840;
+    border: 1px solid #2a7a2a;
 }
 
 /* ── Buttons ── */
 QPushButton {
-    background-color: #2a3545;
-    color: #c0ccd8;
-    border: 1px solid #3a4558;
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #c0c0c0;
     border-radius: 4px;
     padding: 7px 18px;
     font-size: 12px;
     min-width: 80px;
 }
 QPushButton:hover {
-    background-color: #354255;
-    color: #e0ecf8;
+    background-color: #e0e0e0;
 }
 QPushButton:pressed {
-    background-color: #1e2e40;
+    background-color: #d0d0d0;
 }
 QPushButton[accent="true"] {
-    background-color: #1e5c8a;
-    color: #e0f0ff;
-    border: 1px solid #2d7ab0;
+    background-color: #3a7ca5;
+    color: #ffffff;
+    border: 1px solid #2a5a80;
     font-weight: bold;
 }
 QPushButton[accent="true"]:hover {
-    background-color: #2570a0;
+    background-color: #2a6a90;
 }
 QPushButton[accent="true"]:pressed {
-    background-color: #184a70;
+    background-color: #1e5a80;
 }
 QPushButton[accent="true"]:disabled {
-    background-color: #1a3550;
-    color: #4a6a80;
-    border: 1px solid #1e3a50;
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    border: 1px solid #d0d0d0;
 }
 
 /* ── Divider ── */
 QFrame[frameShape="4"],   /* HLine */
 QFrame[frameShape="5"] {  /* VLine */
-    color: #2a3545;
-    background-color: #2a3545;
+    color: #d0d0d0;
+    background-color: #d0d0d0;
     max-height: 1px;
 }
 """
+# ============================================================
 
-
-# ---------------------------------------------------------------------------
-# Dialog
-# ---------------------------------------------------------------------------
 
 class ActivityDialog(QDialog):
     """
