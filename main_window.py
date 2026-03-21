@@ -1,5 +1,5 @@
 """
-Main Window for Mini-P6 CPM Scheduler – Light Theme.
+Main Window for Mini-P7 CPM Scheduler – Light Theme.
 
 Layout:
   ┌─────────────────────────────────────────────────────┐
@@ -77,7 +77,7 @@ class MainWindow(QMainWindow):
     # ------------------------------------------------------------------
     def _setup_window(self):
         """Set window title, minimum size, and initial size."""
-        self.setWindowTitle("Mini-P6  |  CPM Scheduler")
+        self.setWindowTitle("Mini-P7  |  CPM Scheduler")
         self.setMinimumSize(1100, 680)
         self.resize(1400, 780)
 
@@ -185,7 +185,7 @@ class MainWindow(QMainWindow):
         logo.setStyleSheet("color: #2a7ab0; font-size: 20px;")
         row.addWidget(logo)
 
-        title = QLabel("Mini-P6")
+        title = QLabel("Mini-P7")
         title.setStyleSheet(
             "color: #202020; font-size: 18px; font-weight: bold; letter-spacing: 1px; margin-left: 6px;"
         )
