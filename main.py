@@ -1,5 +1,5 @@
 """
-Mini-P6 — CPM Scheduler
+Mini-P7 — CPM Scheduler
 ========================
 Application entry point.
 
