@@ -13,7 +13,7 @@ Fixes applied
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 from typing import Dict, Optional
-
+#typing import unused 
 from models import Base, ActivityRecord
 from activity import Activity
 
